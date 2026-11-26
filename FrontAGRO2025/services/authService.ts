@@ -1,6 +1,5 @@
 // Backend manzili
-const API_URL = "http://localhost:5000/api/auth";
-
+const API_URL = "https://agronomai2025.onrender.com/api/auth";
 // 1. Ro'yxatdan o'tish
 export const registerUser = async (userData: any) => {
   const response = await fetch(`${API_URL}/register`, {

@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/market";
+const API_URL = "https://agronomai2025.onrender.com/api/market";
 
 // 1. Barcha tovarlarni bazadan olish (Marketplace sahifasi uchun)
 export const fetchProducts = async () => {

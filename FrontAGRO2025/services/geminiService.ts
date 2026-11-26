@@ -1,6 +1,6 @@
 import { AppLanguage } from "../types";
 
-const BACKEND_URL = "http://localhost:5000/api";
+const BACKEND_URL = "https://agronomai2025.onrender.com/api";
 
 // Yordamchi funksiya: User ID ni xavfsiz olish
 const getSafeUserId = () => {

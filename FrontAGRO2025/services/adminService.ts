@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api/admin";
+const API_URL = "https://agronomai2025.onrender.com/api/admin";
 
 export const fetchAdminStats = async (token: string) => {
   const response = await fetch(`${API_URL}/stats`, {
