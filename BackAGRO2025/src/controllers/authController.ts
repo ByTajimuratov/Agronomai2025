@@ -3,8 +3,6 @@ import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { User } from '../models/User';
 
-const JWT_SECRET = process.env.JWT_SECRET || 'secret';
-
 // 1. Ro'yxatdan o'tish
 export const register = async (req: Request, res: Response) => {
   try {
@@ -45,7 +43,7 @@ export const login = async (req: Request, res: Response) => {
     if (!isMatch) return res.status(400).json({ message: "Parol noto'g'ri" });
 
     // Token yaratish
-    const token = jwt.sign({ userId: user._id, role: user.role }, JWT_SECRET, { expiresIn: '7d' });
+  const token = jwt.sign({ userId: user._id, role: user.role }, process.env.JWT_SECRET as string, { expiresIn: '7d' });
 
     // ✅ MUHIM: Login qilganda barcha profil ma'lumotlarini qaytaramiz
     // Shunda frontenddagi ma'lumotlar (telefon, tuman) o'chib ketmaydi
