@@ -10,7 +10,7 @@ import { CreateListingModal } from './modals/CreateListingModal';
 import { CheckoutFlow } from './marketplace/CheckoutFlow';
 
 // Backend URL manzili
-const BACKEND_URL = "http://localhost:5000";
+const BACKEND_URL = "https://agronomai2025.onrender.com";
 const PLACEHOLDER_IMAGE = "https://placehold.co/400x300?text=Rasm+Yoq";
 
 export const Marketplace: React.FC = () => {

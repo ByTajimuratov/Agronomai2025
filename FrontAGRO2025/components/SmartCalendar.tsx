@@ -136,7 +136,7 @@ const AddCropModal = ({ isOpen, onClose, onAdd }: any) => {
             const user = JSON.parse(userStr);
             const userId = user._id || user.id;
 
-            const res = await fetch('http://localhost:5000/api/calendar/generate', {
+            const res = await fetch('https://agronomai2025.onrender.com/api/calendar/generate', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${token}` },
                 body: JSON.stringify({ userId, cropName: name, plantingDate: date })
@@ -197,7 +197,7 @@ export const SmartCalendar: React.FC = () => {
                 const user = JSON.parse(userStr);
                 const userId = user._id || user.id;
                 
-                const res = await fetch(`http://localhost:5000/api/calendar/list?userId=${userId}`, {
+                const res = await fetch(`https://agronomai2025.onrender.com/api/calendar/list?userId=${userId}`, {
                     headers: { 'Authorization': `Bearer ${token}` }
                 });
                 if (res.ok) setMyCrops(await res.json());
@@ -218,7 +218,7 @@ export const SmartCalendar: React.FC = () => {
 
       try {
           const token = localStorage.getItem('token');
-          const res = await fetch(`http://localhost:5000/api/calendar/${id}`, {
+          const res = await fetch(`https://agronomai2025.onrender.com/api/calendar/${id}`, {
               method: 'DELETE',
               headers: { 'Authorization': `Bearer ${token}` }
           });
@@ -252,7 +252,7 @@ export const SmartCalendar: React.FC = () => {
       // Serverga yuborish
       try {
           const token = localStorage.getItem('token');
-          await fetch(`http://localhost:5000/api/calendar/${cropId}/task/${taskId}`, {
+          await fetch(`https://agronomai2025.onrender.com/api/calendar/${cropId}/task/${taskId}`, {
               method: 'PUT',
               headers: { 
                   'Content-Type': 'application/json',

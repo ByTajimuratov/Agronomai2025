@@ -25,7 +25,7 @@ export const WeatherDetailsModal: React.FC<Props> = ({ isOpen, onClose }) => {
     useEffect(() => {
         if (isOpen) {
             setLoading(true);
-            fetch('http://localhost:5000/api/weather/forecast')
+            fetch('https://agronomai2025.onrender.com/api/weather/forecast')
                 .then(res => res.json())
                 .then(data => setForecast(data))
                 .catch(err => console.error("Prognoz xatosi:", err))

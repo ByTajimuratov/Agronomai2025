@@ -21,7 +21,7 @@ export const NewsFeedPage: React.FC = () => {
     useEffect(() => {
         const fetchNews = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/news');
+                const response = await axios.get('https://agronomai2025.onrender.com/api/news');
                 const formattedNews = response.data.map((item: any) => ({
                     id: item._id,
                     title: item.title,

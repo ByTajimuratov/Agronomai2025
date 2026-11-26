@@ -22,11 +22,11 @@ export const HomeDashboard: React.FC = () => {
         const loadDashboardData = async () => {
             try {
                 // Ob-havo
-                const weatherRes = await fetch('http://localhost:5000/api/weather');
+                const weatherRes = await fetch('https://agronomai2025.onrender.com/api/weather');
                 if (weatherRes.ok) setWeather(await weatherRes.json());
 
                 // Yangiliklar
-                const newsRes = await fetch('http://localhost:5000/api/news');
+                const newsRes = await fetch('https://agronomai2025.onrender.com/api/news');
                 if (newsRes.ok) {
                     const newsData = await newsRes.json();
                     setNews(newsData.slice(0, 3)); // Dashboardda faqat oxirgi 3 tasini ko'rsatamiz
@@ -37,7 +37,7 @@ export const HomeDashboard: React.FC = () => {
                     const userId = user._id || user.id;
                     const token = localStorage.getItem('token');
                     if (token) {
-                        const cropsRes = await fetch(`http://localhost:5000/api/calendar/list?userId=${userId}`, {
+                        const cropsRes = await fetch(`https://agronomai2025.onrender.com/api/calendar/list?userId=${userId}`, {
                             headers: { 'Authorization': `Bearer ${token}` }
                         });
                         if (cropsRes.ok) setCrops(await cropsRes.json());
