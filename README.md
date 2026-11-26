@@ -1,7 +1,9 @@
 # 🌱 AgronomAI
 
 AI-powered farming assistant for farmers in Uzbekistan. It helps plan crop work, track the season, predict harvests and trade agricultural products in one app.
+**Live Demo:** [https://agronomai2025.vercel.app](https://agronomai2025.vercel.app)
 
+> **Demo Note:** Because the backend runs on a free tier, the first request after idle time may take up to ~30–50 seconds while the server wakes up.
 ## Features
 
 - **Smart Calendar**: AI-generated crop task schedule, editable by the user
