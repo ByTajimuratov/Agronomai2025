@@ -19,7 +19,7 @@ AI-powered farming assistant for farmers in Uzbekistan. It helps plan crop work,
 | Part | Technologies |
 |------|--------------|
 | Frontend | React, TypeScript, Vite, Capacitor |
-| Backend | Node.js, TypeScript |
+| Backend | Node.js, TypeScript, Express |
 | Database | MongoDB (Mongoose) |
 | AI | Google Gemini API |
 | Auth | JWT, bcrypt |
