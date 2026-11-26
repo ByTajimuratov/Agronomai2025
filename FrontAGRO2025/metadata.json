@@ -1,0 +1,9 @@
+{
+  "name": "AgronomAI",
+  "description": "AI-powered agricultural companion for farmers, offering leaf analysis, market access, and expert advisory.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone",
+    "geolocation"
+  ]
+}

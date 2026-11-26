@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">AgronomAI</string>
+    <string name="title_activity_main">AgronomAI</string>
+    <string name="package_name">com.AgainUP.AgranomAI</string>
+    <string name="custom_url_scheme">com.AgainUP.AgranomAI</string>
+</resources>
